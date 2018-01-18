@@ -1,0 +1,45 @@
+{% block content %}
+
+{% for event in object_list %}
+	<div class="row program-div" style="background-color: #efeee3; border-bottom: 1px solid #000;border-top: 1px solid #000;">		
+			<div class="col-sm-1"></div>
+			<div class="col-sm-4" style="text-align: center;">
+				
+					<time class="date-as-calendar position-em size1_25x" style="box-shadow: 10px 10px 40px #888;">
+						<span class="weekday">Saturday</span>
+						<span class="day">{{ event.date|date:"d" }}</span>
+						<span class="month">
+						{% if event.date|date:"m" == "01" %} ianuarie
+						{% elif event.date|date:"m" == "02" %} februarie
+						{% elif event.date|date:"m" == "03" %} martie 
+						{% elif event.date|date:"m" == "04" %} aprilie
+						{% elif event.date|date:"m" == "05" %} mai  
+						{% elif event.date|date:"m" == "06" %} iunie 
+						{% elif event.date|date:"m" == "07" %} iulie 
+						{% elif event.date|date:"m" == "08" %} august 
+						{% elif event.date|date:"m" == "09" %} septembrie 
+						{% elif event.date|date:"m" == "10" %} octombrie 
+						{% elif event.date|date:"m" == "11" %} noiembrie 
+						{% elif event.date|date:"m" == "12" %} decembrie 
+						{% else %}{{ event.date|date:"m" }}
+						{% endif %}
+						</span>
+						<span class="year">{{ event.date|date:"Y" }}</span>
+					</time>
+				
+			</div>
+			<div class="col-sm-6 program-text" style="font-size: 18px; text-align: justify-all; padding-right: 80px;">
+				
+					<ul style="list-style-type: none;">
+						<li><strong>{{ event.date.time }}</strong> - {{ event.event }}</li>
+						<li><strong>{{ event.interval_1 }}</strong> - {{ event.event_1 }}</li>
+						<li><strong>{{ event.interval_2 }}</strong> - {{ event.event_2 }}</li>
+						<li><strong>{{ event.interval_3 }}</strong> - {{ event.event_3 }}</li>
+					</ul>
+				
+			</div>
+			<div class="col-sm-1"></div>
+	</div>
+{% endfor %}
+
+{% endblock %}

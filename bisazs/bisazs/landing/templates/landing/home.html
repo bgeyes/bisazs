@@ -1,0 +1,67 @@
+{% extends "landing/header.html" %}
+
+{% block content %}
+<div class="fixed-bg">
+<div class="container-fluid">
+		<div >
+			
+			<div class="top-menu">
+				<div class="scrolling-a">
+					<a href="#program" class="wow bounceInLeft">
+						<div class="menu-icon">
+							<span class="glyphicon glyphicon-time" style="font-size: 50px;"></span>
+							<p>Program</p>
+						</div>
+					</a>
+					<a href="#info" class="wow bounceInDown">
+						<div class="menu-icon">
+							<span class="glyphicon glyphicon-info-sign" style="font-size: 50px;"></span>
+							<p>Informatii</p>
+						</div>
+					</a>
+					<a href="#directii" class="wow bounceInUp">
+						<div class="menu-icon">
+							<span class="glyphicon glyphicon-move" style="font-size: 50px;"></span>
+							<p>Directii</p>
+						</div>
+					</a>
+					<a href="#contact" class="wow bounceInRight">
+						<div class="menu-icon">
+							<span class="glyphicon glyphicon-envelope" style="font-size: 50px;"></span>
+							<p>Contact</p>
+						</div>
+					</a>
+				</div>
+				
+			</div>
+		</div>
+</div>
+</div>
+<div class="fixed-bg">
+	<div class="height-filler"></div>
+	<p class="intro-text wow fadeInDown">Bun venit pe pagina</p>
+	<h1 class="intro-text-1 wow fadeInDown">Bisericii Adventiste Simand</h1>
+	<p class="intro-text-2 wow fadeInDown">Aici puteti gasi informatii privind programul urmatoarelor intalniri, date de contact, adresa si informatii in legatura cu biserica noastra</p>
+	<div class="height-filler-1"></div>
+
+	<div class="container-fluid">
+		<div class="row">
+			
+			<div >
+				<div class="container-fluid">
+					<div class="row splitter" id="program"><span class="glyphicon glyphicon-time" style="font-size: 50px; text-align: center; padding: 15px;"></span></div>
+					<div>{% include "landing/includes/program.html" %}</div>
+					<div class="row splitter" style="height: 10px;"></div>
+					<div class="row" id="info">{% include "landing/includes/informatii.html" %}</div>
+					<div class="row splitter" id="directii"><span class="glyphicon glyphicon-move" style="font-size: 50px; padding: 15px;"></span></div>
+					<div class="row">{% include "landing/includes/directii.html" %}</div>
+					<div class="row splitter" style="height: 10px;"></div>
+					<div class="row" id="contact">{% include "landing/includes/contact.html" %}</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+{% endblock %}

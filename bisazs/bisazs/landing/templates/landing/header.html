@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>home</title>
+	<meta charset="UTF-8">
+	{% load staticfiles %}
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link href="https://fonts.googleapis.com/css?family=Amiko" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" type="text/css" href="{% static 'landing/css/header.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'landing/css/animate.css' %}">
+
+</head>
+
+<body class='body'>
+	<header>
+		<nav class="navbar navbar-default navbar-fixed-top cbp-af-header">
+		  <div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      
+		      <a href="/"><img src="{% static 'landing/img/logo-resized.png' %}"></a>
+	      	  
+		    </div>
+
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      
+		      
+		      <ul class="nav navbar-nav navbar-right">
+		        <li><a href="/photos/">Galerie Foto</a></li>
+		        <li><a href="/videos/">Galerie Video</a></li>
+		      </ul>
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
+	</header>
+	
+			
+			
+				{% block content %}
+				{% endblock %}
+		
+		
+	
+	<footer class="container-fluid">
+		<h6>developed by DTS prisma Solutions   &copy; 2017</h6>
+	</footer>
+
+	<script src="{% static 'landing/js/classie.js' %}"></script>
+	<script src="{% static 'landing/js/cbpAnimatedHeader.min.js' %}"></script>
+	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="{% static 'landing/js/jquery.easing.js' %}"></script>
+	<script src="{% static 'landing/js/wow.min.js' %}"></script>
+	<script src="{% static 'landing/js/scrolling.js' %}"></script>
+</body>
+
+</html>

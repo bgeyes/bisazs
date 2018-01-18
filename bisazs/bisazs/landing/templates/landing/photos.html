@@ -1,0 +1,13 @@
+{% extends "landing/header.html" %}
+
+{% block content %}
+<div class="container-fluid" style="background-color: #efeee3;">
+	<div class="row">
+	{% for photos in object_list %}
+		<div>
+			<div class="img-rounded photo-thumbnail col-sm-4 img-responsive">{{ photos.google_url|safe }}</div>
+		</div>
+	{% endfor %}
+	</div>
+</div>
+{% endblock %}
